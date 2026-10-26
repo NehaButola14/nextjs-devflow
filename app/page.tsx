@@ -1,7 +1,11 @@
 import React from "react";
 
 const page = () => {
-  return <h1>Welcome to NextJs course</h1>;
+  return (
+    <>
+      <h1 className="text-light-500">Welcomg to DevFlow </h1>
+    </>
+  );
 };
 
 export default page;
