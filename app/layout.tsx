@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import ThemeProvider from "@/context/theme";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/navigation/navbar";
 
 const inter = localFont({
   src: "./fonts/Inter-VariableFont.ttf",
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
   description: "A better version of StackOverFlow",
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -36,7 +35,6 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <Navbar />
           {children}
         </ThemeProvider>
       </body>
